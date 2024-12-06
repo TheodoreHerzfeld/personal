@@ -17,6 +17,7 @@ spec:
       containers:
       - name: homepage
         image: ghcr.io/theodoreherzfeld/personal:main
+        imagePullPolicy: Always
         ports:
         - containerPort: 80
         readinessProbe:
