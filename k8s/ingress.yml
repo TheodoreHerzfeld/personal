@@ -1,0 +1,17 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: homepage-ingress
+spec:
+  ingressClassName: public
+  rules:
+  - host: "apollo-consulting.org"
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: homepage-service
+            port:
+              number: 80
