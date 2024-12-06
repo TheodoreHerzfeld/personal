@@ -5,6 +5,7 @@ RUN apk add --no-cache --repository=https://dl-cdn.alpinelinux.org/alpine/edge/c
 ADD ./personal /site
 
 WORKDIR /site
+RUN rm -rfv /usr/share/nginx/html/*
 RUN hugo build && cp -Rv /site/public/* /usr/share/nginx/html/
 
 EXPOSE 80
