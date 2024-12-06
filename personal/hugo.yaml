@@ -1,0 +1,65 @@
+baseURL: https://example.com
+title: Theodore Herzfeld
+languageCode: en-us
+theme: hello-friend-ng
+PygmentsCodeFences: true
+PygmentsStyle: monokai
+copyright: This work is licensed under a Creative Commons
+  Attribution-NonCommercial 4.0 International License.
+
+pagination:
+  disableAliases: false
+  pagerSize: 20
+  path: page
+params:
+  dateform: Jan 2, 2006
+  dateformShort: Jan 2
+  dateformNum: 2006-01-02
+  dateformNumTime: 2006-01-02 15:04
+  description: Theodore Herzfeld personal homepage
+  keywords: ""
+  images:
+    - ""
+  homeSubtitle: DevOps/Systems Engineer with 6 years of proffessional experience. You can find my résumé here, as well as information on how this site is hosted.
+  justifyContent: false
+  author:
+    name: Theodore Herzfeld
+  footer:
+    trademark: 2024
+    rss: false
+    copyright: true
+    author: true
+    bottomText:
+      - Powered by <a href="http://gohugo.io">Hugo</a>, built in Docker, Deployed with Kubernetes
+  favicon:
+    color:
+      mask: "#1b1c1d"
+      msapplication: "#1b1c1d"
+      theme: "#1b1c1d"
+  logo:
+    logoMark: ">"
+    logoText: $ cd ~/therzfeld/
+    logoHomeLink: /
+  social:
+    - name: email
+      url: mailto:teddy.herzfeld@icloud.com
+    - name: github
+      url: https://github.com/TheodoreHerzfeld
+    - name: linkedin
+      url: https://www.linkedin.com/in/theodore-herzfeld/
+languages:
+  en:
+    weight: 1
+    copyright: <a href="https://creativecommons.org/licenses/by-nc/4.0/"
+      target="_blank" rel="noopener">CC BY-NC 4.0</a>
+    params:
+      subtitle: DevOps/Systems Engineer with 6 years of proffessional experience
+menu:
+  main:
+    - identifier: resume
+      name: Résumé/CV
+      url: /static/resume.pdf
+    - identifier: about
+      name: about
+      url: /about/
+
