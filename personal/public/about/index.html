@@ -7,8 +7,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="author" content="">
 <meta name="description" content="This site was generated using hugo, a static site generator. You can find the source code here.
-It is then packaged into a Docker image, which is deployed to my self-hosted and managed Kubernetes cluster. Traffic is routed to to the application by an Nginx reverse proxy, which encrypts the traffic using a LetsEncrypt issued certificate.
-This site uses CI/CD: Github Actions is used to build the Docker image, and ArgoCD deploys the application to the cluster.
+It is then packaged into a Docker image, which is deployed to my self-hosted and managed Kubernetes cluster. Traffic is routed to to the cluster by a Cloudflare tunnel, which handles encryption, and then on to the container by an ingress controller.
+The entire application, from build to deployment, is controlled by code: Github Actions for build, and Terraform for Cloudflare and Kubernetes configuration.
 " />
 <meta name="keywords" content="" />
 <meta name="robots" content="noodp" />
@@ -18,7 +18,7 @@ This site uses CI/CD: Github Actions is used to build the Docker image, and Argo
 
     <title>
         
-            About this Site :: Theodore Herzfeld  — DevOps/Systems Engineer with 6 years of proffessional experience
+            About this Site :: Theodore Herzfeld  — AWS Certified DevOps/Systems Engineer with 6 years of proffessional experience
         
     </title>
 
@@ -44,17 +44,17 @@ This site uses CI/CD: Github Actions is used to build the Docker image, and Argo
 
   <meta itemprop="name" content="About this Site">
   <meta itemprop="description" content="This site was generated using hugo, a static site generator. You can find the source code here.
-It is then packaged into a Docker image, which is deployed to my self-hosted and managed Kubernetes cluster. Traffic is routed to to the application by an Nginx reverse proxy, which encrypts the traffic using a LetsEncrypt issued certificate.
-This site uses CI/CD: Github Actions is used to build the Docker image, and ArgoCD deploys the application to the cluster.">
-  <meta itemprop="wordCount" content="77">
+It is then packaged into a Docker image, which is deployed to my self-hosted and managed Kubernetes cluster. Traffic is routed to to the cluster by a Cloudflare tunnel, which handles encryption, and then on to the container by an ingress controller.
+The entire application, from build to deployment, is controlled by code: Github Actions for build, and Terraform for Cloudflare and Kubernetes configuration.">
+  <meta itemprop="wordCount" content="102">
   <meta itemprop="image" content="http://localhost:1313/">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="http://localhost:1313/">
   <meta name="twitter:title" content="About this Site">
   <meta name="twitter:description" content="This site was generated using hugo, a static site generator. You can find the source code here.
-It is then packaged into a Docker image, which is deployed to my self-hosted and managed Kubernetes cluster. Traffic is routed to to the application by an Nginx reverse proxy, which encrypts the traffic using a LetsEncrypt issued certificate.
-This site uses CI/CD: Github Actions is used to build the Docker image, and ArgoCD deploys the application to the cluster.">
+It is then packaged into a Docker image, which is deployed to my self-hosted and managed Kubernetes cluster. Traffic is routed to to the cluster by a Cloudflare tunnel, which handles encryption, and then on to the container by an ingress controller.
+The entire application, from build to deployment, is controlled by code: Github Actions for build, and Terraform for Cloudflare and Kubernetes configuration.">
 
 
 
@@ -125,7 +125,8 @@ This site uses CI/CD: Github Actions is used to build the Docker image, and Argo
 
         
             <div class="content"><p>This site was generated using <a href="https://gohugo.io">hugo</a>, a static site generator. You can find the source code <a href="https://github.com/TheodoreHerzfeld/personal">here</a>.</p>
-<p>It is then packaged into a Docker image, which is deployed to my self-hosted and managed Kubernetes cluster. Traffic is routed to to the application by an Nginx reverse proxy, which encrypts the traffic using a LetsEncrypt issued certificate.</p>
+<p>It is then packaged into a Docker image, which is deployed to my self-hosted and managed Kubernetes cluster. Traffic is routed to to the cluster by a Cloudflare tunnel, which handles encryption, and then on to the container by an ingress controller.</p>
+<p>The entire application, from build to deployment, is controlled by code: Github Actions for build, and Terraform for Cloudflare and Kubernetes configuration.</p>
 <p>This site uses CI/CD: Github Actions is used to build the Docker image, and ArgoCD deploys the application to the cluster.</p>
 </div>
         

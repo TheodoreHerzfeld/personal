@@ -22,7 +22,7 @@ params:
   keywords: ""
   images:
     - ""
-  homeSubtitle: DevOps/Systems Engineer with 6 years of proffessional experience.
+  homeSubtitle: AWS Certified DevOps/Systems Engineer with 6 years of proffessional experience.
   body:
     - You can find my résumé here, as well as information on how this site is hosted.
   justifyContent: false
@@ -57,7 +57,7 @@ languages:
     copyright: <a href="https://creativecommons.org/licenses/by-nc/4.0/"
       target="_blank" rel="noopener">CC BY-NC 4.0</a>
     params:
-      subtitle: DevOps/Systems Engineer with 6 years of proffessional experience
+      subtitle: AWS Certified DevOps/Systems Engineer with 6 years of proffessional experience
 menu:
   main:
     - identifier: resume
