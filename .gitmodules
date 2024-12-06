@@ -1,12 +1,3 @@
-[submodule "personal/themes/ananke"]
-	path = personal/themes/ananke
-	url = https://github.com/theNewDynamic/gohugo-theme-ananke.git
-[submodule "personal/themes/hugo-coder"]
-	path = personal/themes/hugo-coder
-	url = https://github.com/luizdepra/hugo-coder.git
-[submodule "personal/themes/hugo-embed-pdf-shortcode"]
-	path = personal/themes/hugo-embed-pdf-shortcode
-	url = https://github.com/anvithks/hugo-embed-pdf-shortcode.git
 [submodule "personal/themes/hello-friend-ng"]
 	path = personal/themes/hello-friend-ng
 	url = https://github.com/theodoreherzfeld/hugo-theme-hello-friend-ng.git
