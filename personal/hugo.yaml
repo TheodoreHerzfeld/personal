@@ -7,6 +7,8 @@ PygmentsStyle: monokai
 copyright: This work is licensed under a Creative Commons
   Attribution-NonCommercial 4.0 International License.
 
+disableReadOtherPosts: true
+
 pagination:
   disableAliases: false
   pagerSize: 20
@@ -20,7 +22,9 @@ params:
   keywords: ""
   images:
     - ""
-  homeSubtitle: DevOps/Systems Engineer with 6 years of proffessional experience. You can find my résumé here, as well as information on how this site is hosted.
+  homeSubtitle: DevOps/Systems Engineer with 6 years of proffessional experience.
+  body:
+    - You can find my résumé here, as well as information on how this site is hosted.
   justifyContent: false
   author:
     name: Theodore Herzfeld
@@ -60,6 +64,9 @@ menu:
       name: Résumé/CV
       url: /static/resume.pdf
     - identifier: about
-      name: about
+      name: About the Site
       url: /about/
+    - identifier: source
+      name: source
+      url: https://github.com/TheodoreHerzfeld/personal
 
