@@ -9,8 +9,6 @@ copyright: This work is licensed under a Creative Commons
 
 disableReadOtherPosts: false
 
-enableGitInfo: true
-
 pagination:
   disableAliases: false
   pagerSize: 20
