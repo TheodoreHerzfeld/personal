@@ -7,7 +7,9 @@ PygmentsStyle: monokai
 copyright: This work is licensed under a Creative Commons
   Attribution-NonCommercial 4.0 International License.
 
-disableReadOtherPosts: true
+disableReadOtherPosts: false
+
+enableGitInfo: true
 
 pagination:
   disableAliases: false
@@ -24,7 +26,7 @@ params:
     - ""
   homeSubtitle: AWS Certified DevOps/Systems Engineer with 6 years of experience.
   body:
-    - You can find my résumé here, as well as information on how this site is hosted.
+    - You can find my résumé here, as well as information on how this site is hosted, and my various projects. 
   justifyContent: false
   author:
     name: Theodore Herzfeld
@@ -34,7 +36,7 @@ params:
     copyright: true
     author: true
     bottomText:
-      - Powered by <a href="http://gohugo.io">Hugo</a>, built in Docker, Deployed with Kubernetes
+      - Made with passion, trial, and error. Deployed in Kubernetes
   favicon:
     color:
       mask: "#1b1c1d"
@@ -44,6 +46,10 @@ params:
     logoMark: ">"
     logoText: $ cd ~/therzfeld/
     logoHomeLink: /
+  portrait:
+    path: /portrait.jpg
+    alt: Portrait
+    maxWidth: 200px
   social:
     - name: email
       url: mailto:teddy.herzfeld@icloud.com
@@ -61,12 +67,14 @@ languages:
 menu:
   main:
     - identifier: resume
-      name: Résumé/CV
+      name: / Résumé
       url: /static/resume.pdf
     - identifier: about
-      name: About the Site
-      url: /about/
+      name: / About this Site
+      url: /projects/this_site
+    - identifier: projects
+      name: / Projects
+      url: /projects
     - identifier: source
-      name: source
+      name: / Source
       url: https://github.com/TheodoreHerzfeld/personal
-

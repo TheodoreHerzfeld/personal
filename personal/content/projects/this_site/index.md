@@ -1,5 +1,6 @@
 ---
-title: About this Site
+title: About This Site
+date: 2024-12-06
 ---
 
 This site was generated using [hugo](https://gohugo.io), a static site generator. You can find the source code [here](https://github.com/TheodoreHerzfeld/personal).
