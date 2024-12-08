@@ -59,7 +59,7 @@ languages:
   en:
     weight: 1
     copyright: <a href="https://creativecommons.org/licenses/by-nc/4.0/"
-      target="_blank" rel="noopener">CC BY-NC 4.0</a>
+      target="_blank" rel="noopener">CC BY-NC 4.0</a><script defer src="https://cloud.umami.is/script.js" data-website-id="6b45bb94-0563-447a-83ab-997fe9012173"></script>
     params:
       subtitle: AWS Certified DevOps/Systems Engineer with 6 years of proffessional experience
 menu:
