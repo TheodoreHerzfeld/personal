@@ -1,7 +1,6 @@
 baseURL: https://apollo-consulting.org
 title: Theodore Herzfeld
 languageCode: en-us
-theme: hello-friend-ng
 PygmentsCodeFences: true
 PygmentsStyle: monokai
 copyright: This work is licensed under a Creative Commons
@@ -9,11 +8,14 @@ copyright: This work is licensed under a Creative Commons
 
 disableReadOtherPosts: false
 
+
 pagination:
   disableAliases: false
   pagerSize: 20
   path: page
 params:
+  backgroundImage: "assets/images/background.jpg"
+  enableThemeToggle: true
   dateform: Jan 2, 2006
   dateformShort: Jan 2
   dateformNum: 2006-01-02
@@ -34,7 +36,7 @@ params:
     copyright: true
     author: true
     bottomText:
-      - Made with passion, trial, and error. Deployed in Kubernetes
+      - Made with passion, trial, and error | Based on <a href="https://github.com/rhazdon/hugo-theme-hello-friend-ng" target="_blank">hello-friend-ng</a> | <a href="/privacy">privacy</a>
   favicon:
     color:
       mask: "#1b1c1d"
@@ -45,7 +47,7 @@ params:
     logoText: $ cd ~/therzfeld/
     logoHomeLink: /
   portrait:
-    path: /portrait.jpg
+    path: /img/portrait.jpg
     alt: Portrait
     maxWidth: 200px
   social:
@@ -58,15 +60,14 @@ params:
 languages:
   en:
     weight: 1
-    copyright: <a href="https://creativecommons.org/licenses/by-nc/4.0/"
-      target="_blank" rel="noopener">CC BY-NC 4.0</a><script defer src="https://cloud.umami.is/script.js" data-website-id="6b45bb94-0563-447a-83ab-997fe9012173"></script>
-    params:
-      subtitle: AWS Certified DevOps/Systems Engineer with 6 years of proffessional experience
+    copyright: |
+      <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>
+      <script defer src="https://cloud.umami.is/script.js" data-website-id="6b45bb94-0563-447a-83ab-997fe9012173"></script>
 menu:
   main:
     - identifier: resume
       name: / Résumé
-      url: /static/resume.pdf
+      url: /resume
     - identifier: about
       name: / About this Site
       url: /projects/this_site

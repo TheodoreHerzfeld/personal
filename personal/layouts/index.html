@@ -1,0 +1,31 @@
+{{ define "body" }}
+    <body class="{{ if .Site.Params.backgroundImage }} background-image" style="background-image: url('{{ .Site.Params.backgroundImage }}');" {{ else }}"{{ end }}>
+{{ end }}
+
+{{ define "main" }}
+    <main>
+        <div>
+            {{ if .Site.Params.Portrait.Path }}
+                <img src="{{ .Site.Params.Portrait.Path }}" class="circle" alt="{{ .Site.Params.Portrait.Alt }}" style="max-width:{{ .Site.Params.Portrait.MaxWidth }}" />
+            {{ end }}
+
+            <h1>{{ .Site.Title }}</h1>
+
+            {{ partial "subtitle.html" . }}
+
+            {{- with .Site.Params.social }}
+                <div>
+                    {{ partial "social-icons.html" . }}
+                </div>
+            {{- end }}
+
+            {{- range .Site.Params.body -}}
+                <p>{{.}}</p>
+            {{- end }}
+            <div class="text-align:center">
+                <a href="https://www.credly.com/badges/f14b3806-b514-4808-bd92-47e87d73058e/public_url" style="text-decoration:none" target="_blank">
+                    <img src="/img/aws-certified-cloud-practitioner.png" alt="AWS Cloud Practitioner" style="max-width:150px;display:inline-block;"/>
+                </a>
+            </div>
+    </main>
+{{ end }}

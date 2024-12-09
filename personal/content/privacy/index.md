@@ -1,0 +1,1 @@
+I use [Umami](https://umami.is/), a privacy respecting analytics tool, to gather analytics on this site.

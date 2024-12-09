@@ -10,3 +10,5 @@ It is then packaged into a Docker image, which is deployed to my self-hosted and
 The entire application, from build to deployment, is controlled by code: Github Actions for build, and Terraform for Cloudflare and Kubernetes configuration.
 
 This site uses CI/CD: Github Actions is used to build the Docker image, and ArgoCD deploys the application to the cluster.
+
+I use [Umami](https://umami.is/), a privacy-respecting analytics tool, to gather analytics on this site.
