@@ -9,19 +9,17 @@
                 <img src="{{ .Site.Params.Portrait.Path }}" class="circle" alt="{{ .Site.Params.Portrait.Alt }}" style="max-width:{{ .Site.Params.Portrait.MaxWidth }}" />
             {{ end }}
 
-            <h1>{{ .Site.Title }}</h1>
+            <h1 style="margin-bottom: 1px";>{{ .Site.Title }}</h1>
+            {{- with .Site.Params.social }}
+            <div>
+                {{ partial "social-icons.html" . }}
+            </div>
+            <p>AWS Certified DevOps/Systems Engineer with 6 years of experience.</p>
+            {{- end }}
 
             {{ partial "subtitle.html" . }}
 
-            {{- with .Site.Params.social }}
-                <div>
-                    {{ partial "social-icons.html" . }}
-                </div>
-            {{- end }}
 
-            {{- range .Site.Params.body -}}
-                <p>{{.}}</p>
-            {{- end }}
             <div class="text-align:center">
                 <a href="https://www.credly.com/badges/f14b3806-b514-4808-bd92-47e87d73058e/public_url" style="text-decoration:none" target="_blank">
                     <img src="/img/aws-certified-cloud-practitioner.png" alt="AWS Cloud Practitioner" style="max-width:150px;display:inline-block;"/>
