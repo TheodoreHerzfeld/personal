@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Projects on Theodore Herzfeld</title>
+    <link>//192.168.1.163:1313/projects/</link>
+    <description>Recent content in Projects on Theodore Herzfeld</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;
+&lt;script defer src=&#34;https://cloud.umami.is/script.js&#34; data-website-id=&#34;6b45bb94-0563-447a-83ab-997fe9012173&#34;&gt;&lt;/script&gt;
+</copyright>
+    <lastBuildDate>Fri, 06 Dec 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="//192.168.1.163:1313/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About This Site</title>
+      <link>//192.168.1.163:1313/projects/this_site/</link>
+      <pubDate>Fri, 06 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>//192.168.1.163:1313/projects/this_site/</guid>
+      <description>&lt;p&gt;This site was generated using &lt;a href=&#34;https://gohugo.io&#34;&gt;hugo&lt;/a&gt;, a static site generator. You can find the source code&#xA;&lt;a href=&#34;https://github.com/TheodoreHerzfeld/personal&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;p&gt;It is then packaged into a Docker image, which is deployed to my self-hosted and managed Kubernetes cluster.&#xA;Traffic is routed to to the cluster by a Cloudflare tunnel, which handles encryption, and then on to the pod&#xA;by an ingress controller.&lt;/p&gt;&#xA;&lt;p&gt;The entire application, from build to deployment, is controlled by code: Github Actions for build, and&#xA;Terraform for Cloudflare and Kubernetes configuration.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Cloudflared-Proxy and Bindcloud</title>
+      <link>//192.168.1.163:1313/projects/bindcloud/</link>
+      <pubDate>Fri, 06 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>//192.168.1.163:1313/projects/bindcloud/</guid>
+      <description>&lt;p&gt;When I first started selfhosting, one of my earliest projects was to setup a custom DNS proxy. I landed on &lt;a href=&#34;https://pi-hole.net/&#34;&gt;Pi-hole&lt;/a&gt;,&#xA;a great option for self-hosting, that not only caches DNS queries for the network, but includes domain-blocking capabilities. With a trove&#xA;of publicly avaialable blocklists, it was the perfect solution.&lt;/p&gt;&#xA;&lt;p&gt;However, after running the instance for a while, I decided to see if I could make it more secure, and more private. I soon learned about&#xA;DNS over https (DOH), and decided to implement it.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Uptime-Kuma Terraform Provider</title>
+      <link>//192.168.1.163:1313/projects/uptime_kuma_provider/</link>
+      <pubDate>Fri, 06 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>//192.168.1.163:1313/projects/uptime_kuma_provider/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/louislam/uptime-kuma&#34;&gt;Uptime-Kuma&lt;/a&gt; is a self-hosted monitoring system. Unfortunately, there is no Terraform provider available for it yet, so, I decided&#xA;to write one. Unfortunately, the official API for the application has not been published yet, so I have halted work on the provider&#xA;in the meantime.&lt;/p&gt;&#xA;&lt;p&gt;Nonetheless, it was a great learning experience, and taught me a lot about the internal workings of Terraform and Terraform providers&#xA;in general, and gave me some good time working with Go and &lt;a href=&#34;https://www.hashicorp.com/blog/terraform-provider-code-generation-now-in-tech-preview&#34;&gt;Hashicorp&amp;rsquo;s official Terraform development tools&lt;/a&gt;.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

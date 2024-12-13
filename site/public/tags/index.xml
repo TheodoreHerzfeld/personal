@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on Theodore Herzfeld</title>
+    <link>//192.168.1.163:1313/tags/</link>
+    <description>Recent content in Tags on Theodore Herzfeld</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;
+&lt;script defer src=&#34;https://cloud.umami.is/script.js&#34; data-website-id=&#34;6b45bb94-0563-447a-83ab-997fe9012173&#34;&gt;&lt;/script&gt;
+</copyright>
+    <atom:link href="//192.168.1.163:1313/tags/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

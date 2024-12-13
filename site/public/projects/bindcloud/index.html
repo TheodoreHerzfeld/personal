@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+        <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="author" content="">
+<meta name="description" content="When I first started selfhosting, one of my earliest projects was to setup a custom DNS proxy. I landed on Pi-hole, a great option for self-hosting, that not only caches DNS queries for the network, but includes domain-blocking capabilities. With a trove of publicly avaialable blocklists, it was the perfect solution.
+However, after running the instance for a while, I decided to see if I could make it more secure, and more private. I soon learned about DNS over https (DOH), and decided to implement it.
+" />
+<meta name="keywords" content="" />
+<meta name="robots" content="noodp" />
+<meta name="theme-color" content="" />
+<link rel="canonical" href="//192.168.1.163:1313/projects/bindcloud/" />
+
+
+    <title>
+        
+            Cloudflared-Proxy and Bindcloud :: Theodore Herzfeld 
+        
+    </title>
+
+
+
+
+
+  <link rel="stylesheet" href="/main.min.244183cde1a38e0b08f82c11791181288f9aac1cc9618cd6f4e9e7710c5768ba.css" integrity="sha256-JEGDzeGjjgsI&#43;CwReRGBKI&#43;arBzJYYzW9OnncQxXaLo=" crossorigin="anonymous">
+
+
+
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="">
+    <link rel="shortcut icon" href="/favicon.ico">
+    <meta name="msapplication-TileColor" content="">
+
+
+
+  <meta itemprop="name" content="Cloudflared-Proxy and Bindcloud">
+  <meta itemprop="description" content="When I first started selfhosting, one of my earliest projects was to setup a custom DNS proxy. I landed on Pi-hole, a great option for self-hosting, that not only caches DNS queries for the network, but includes domain-blocking capabilities. With a trove of publicly avaialable blocklists, it was the perfect solution.
+However, after running the instance for a while, I decided to see if I could make it more secure, and more private. I soon learned about DNS over https (DOH), and decided to implement it.">
+  <meta itemprop="datePublished" content="2024-12-06T00:00:00+00:00">
+  <meta itemprop="dateModified" content="2024-12-06T00:00:00+00:00">
+  <meta itemprop="wordCount" content="261">
+  <meta itemprop="image" content="//192.168.1.163:1313/">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="//192.168.1.163:1313/">
+  <meta name="twitter:title" content="Cloudflared-Proxy and Bindcloud">
+  <meta name="twitter:description" content="When I first started selfhosting, one of my earliest projects was to setup a custom DNS proxy. I landed on Pi-hole, a great option for self-hosting, that not only caches DNS queries for the network, but includes domain-blocking capabilities. With a trove of publicly avaialable blocklists, it was the perfect solution.
+However, after running the instance for a while, I decided to see if I could make it more secure, and more private. I soon learned about DNS over https (DOH), and decided to implement it.">
+
+
+
+
+
+
+
+    <meta property="article:published_time" content="2024-12-06 00:00:00 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+
+
+
+
+    </head>
+
+    
+        <body>
+    
+    
+        <div class="container">
+            <header class="header">
+    <span class="header__inner">
+        <a href="/" style="text-decoration: none;">
+    <div class="logo">
+        
+            <span class="logo__mark">&gt;</span>
+            <span class="logo__text ">
+                $ cd ~/therzfeld/</span>
+            <span class="logo__cursor" style=
+                  "
+                   
+                   ">
+            </span>
+        
+    </div>
+</a>
+
+
+        <span class="header__right">
+                <nav class="menu">
+    <ul class="menu__inner"><li><a href="/projects/this_site">/ About this Site</a></li><li><a href="/projects">/ Projects</a></li><li><a href="/resume">/ Résumé</a></li><li><a href="https://github.com/TheodoreHerzfeld/personal">/ Source</a></li>
+    </ul>
+</nav>
+
+                <span class="menu-trigger">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 0h24v24H0z" fill="none"/>
+                        <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
+                    </svg>
+                </span>
+                <span class="theme-toggle not-selectable"><svg class="theme-toggler" width="24" height="24" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+   <path d="M22 41C32.4934 41 41 32.4934 41 22C41 11.5066 32.4934 3 22
+   3C11.5066 3 3 11.5066 3 22C3 32.4934 11.5066 41 22 41ZM7 22C7
+   13.7157 13.7157 7 22 7V37C13.7157 37 7 30.2843 7 22Z"/>
+ </svg></span>
+        </span>
+    </span>
+</header>
+
+
+            <div class="content">
+                
+    <main class="post">
+
+        <div class="post-info">
+            
+            </p>
+        </div>
+
+        <article>
+            <h2 class="post-title"><a href="//192.168.1.163:1313/projects/bindcloud/">Cloudflared-Proxy and Bindcloud</a></h2>
+
+            
+            
+            
+
+            <div class="post-content">
+                <p>When I first started selfhosting, one of my earliest projects was to setup a custom DNS proxy. I landed on <a href="https://pi-hole.net/">Pi-hole</a>,
+a great option for self-hosting, that not only caches DNS queries for the network, but includes domain-blocking capabilities. With a trove
+of publicly avaialable blocklists, it was the perfect solution.</p>
+<p>However, after running the instance for a while, I decided to see if I could make it more secure, and more private. I soon learned about
+DNS over https (DOH), and decided to implement it.</p>
+<p>One of the most common solutions to this is to run <a href="https://developers.cloudflare.com/1.1.1.1/encryption/dns-over-https/dns-over-https-client/"><code>cloudflared</code></a>. This solution is no longer well documented, but it does still work. Wanting to run in Docker, and finding that
+the existing official container didn&rsquo;t seem to well support this (this is likely wrong, but I was very early in my selfhosting journey),
+I decided, in my infinite wisdom, to create a simple custom Docker container to do the job.</p>
+<p>So I did, and pointed my Pi-hole instance at cloudflared, and voila, fully proxied DNS!</p>
+<p>This container remained in place for a few years until I decided to bring it into Kubernetes. At this point, there was no reason to re-tool
+the solution, as my container had been working for years, but it was time to re-tool things. I moved the repo into my new Gitlab instance,
+setup a pipeline, and implemented automated builds. The application now runs in a stack with a simple Bind instance that routes external
+requests for Kubernetes resources to the Core-DNS instance that provides DNS to the cluster.</p>
+
+            </div>
+        </article>
+
+        <hr />
+
+        <div class="post-info">
+            
+            
+  		</div>
+    </main>
+
+            </div>
+
+            
+                <footer class="footer">
+    
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>&copy; 2024</span>
+            <span><a href="//192.168.1.163:1313/">Theodore Herzfeld</a></span>
+            <span><a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="noopener">CC BY-NC 4.0</a>
+<script defer src="https://cloud.umami.is/script.js" data-website-id="6b45bb94-0563-447a-83ab-997fe9012173"></script>
+</span>
+            
+            
+        </div>
+    </div>
+    
+    
+    <div class="footer__inner">
+        <div class="footer__content">
+            <span>Made with passion, trial, and error | Based on <a href="https://github.com/rhazdon/hugo-theme-hello-friend-ng" target="_blank">hello-friend-ng</a> | <a href="/privacy">privacy</a></span>
+        </div>
+    </div>
+    
+</footer>
+
+            
+        </div>
+
+        
+
+
+
+<script type="text/javascript" src="/bundle.min.fcdbd434c2246625085552a35f7f1945ee33873b87ad089a5d75bb128e7bc92319bc4cf5cf5e9e6683f0710d0a245f08c96f5e0238da7f43ff91975fc78fb07a.js" integrity="sha512-/NvUNMIkZiUIVVKjX38ZRe4zhzuHrQiaXXW7Eo57ySMZvEz1z16eZoPwcQ0KJF8IyW9eAjjaf0P/kZdfx4&#43;weg=="></script>
+
+
+
+
+    </body>
+</html>
