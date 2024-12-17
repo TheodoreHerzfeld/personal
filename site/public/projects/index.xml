@@ -9,8 +9,15 @@
     <copyright>&lt;a href=&#34;https://creativecommons.org/licenses/by-nc/4.0/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;CC BY-NC 4.0&lt;/a&gt;
 &lt;script defer src=&#34;https://cloud.umami.is/script.js&#34; data-website-id=&#34;6b45bb94-0563-447a-83ab-997fe9012173&#34;&gt;&lt;/script&gt;
 </copyright>
-    <lastBuildDate>Fri, 06 Dec 2024 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 16 Dec 2024 00:00:00 +0000</lastBuildDate>
     <atom:link href="//192.168.1.163:1313/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cycler - Automated Restarting of Kubernetes Workloads</title>
+      <link>//192.168.1.163:1313/projects/cycler/</link>
+      <pubDate>Mon, 16 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>//192.168.1.163:1313/projects/cycler/</guid>
+      <description>&lt;h3 id=&#34;source-codehttpsgithubcomtheodoreherzfeldcycler&#34;&gt;&lt;a href=&#34;https://github.com/TheodoreHerzfeld/cycler&#34;&gt;Source Code&lt;/a&gt;&lt;/h3&gt;&#xA;&lt;p&gt;I believe that in low-risk environments, it can sometimes (&lt;em&gt;sometimes&lt;/em&gt;) be a good idea to point images at a &lt;code&gt;latest&lt;/code&gt; tag, and then&#xA;push updates to the Docker registry as code changes, so that the deployment configuration can remain consistent. For fast-moving,&#xA;very simple apps, this can work quite well. This website is one example.&lt;/p&gt;&#xA;&lt;p&gt;Unfortunately, Kubernetes does not have a built-in method to determine if there is a new version of a tag available, so normally&#xA;the developer must trigger a &lt;code&gt;rollout restart&lt;/code&gt; of the service to update to the new image in these cases, either with automation,&#xA;or manually.&lt;/p&gt;</description>
+    </item>
     <item>
       <title>About This Site</title>
       <link>//192.168.1.163:1313/projects/this_site/</link>
