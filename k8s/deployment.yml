@@ -4,6 +4,8 @@ metadata:
   name: homepage-deployment
   labels:
     app: homepage
+  annotations:
+    "app.cycler.io/enable": "true"
 spec:
   replicas: 2
   selector:
