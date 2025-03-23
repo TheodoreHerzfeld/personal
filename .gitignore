@@ -1,6 +1,7 @@
-/personal/public/
+/site/public/
 
-/personal/.hugo_build.lock
+/site/.hugo_build.lock
 
-/personal/resources/_gen/
-/personal/assets/jsconfig.json
+/site/resources/_gen/
+/site/assets/jsconfig.json
+

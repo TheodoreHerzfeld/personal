@@ -17,6 +17,6 @@ I decided, in my infinite wisdom, to create a simple custom Docker container to 
 So I did, and pointed my Pi-hole instance at cloudflared, and voila, fully proxied DNS!
 
 This container remained in place for a few years until I decided to bring it into Kubernetes. At this point, there was no reason to re-tool
-the solution, as my container had been working for years, but it was time to re-tool things. I moved the repo into my new Gitlab instance,
-setup a pipeline, and implemented automated builds. The application now runs in a stack with a simple Bind instance that routes external
-requests for Kubernetes resources to the Core-DNS instance that provides DNS to the cluster.
+the solution, as my container had been working for years, but it was time to implement DevOps and move it to Kubernetes. I moved the repo 
+into my new Gitlab instance, setup a pipeline, and implemented automated builds. The application now runs in a stack with a simple Bind 
+instance that routes external requests for Kubernetes resources to the Core-DNS instance that provides DNS to the cluster.

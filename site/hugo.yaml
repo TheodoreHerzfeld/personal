@@ -14,7 +14,7 @@ pagination:
   pagerSize: 20
   path: page
 params:
-  backgroundImage: "assets/images/background.jpg"
+  # backgroundImage: "assets/images/background.jpg"
   enableThemeToggle: true
   dateform: Jan 2, 2006
   dateformShort: Jan 2
@@ -25,8 +25,6 @@ params:
   images:
     - ""
   homeSubtitle: AWS Certified DevOps/Systems Engineer with 6 years of experience.
-  body:
-    - You can find my résumé here, as well as information on how this site is hosted, and my various projects. 
   justifyContent: false
   author:
     name: Theodore Herzfeld

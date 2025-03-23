@@ -1,7 +1,8 @@
 # STAGE BUILD - build website static files
-FROM alpine as build
+FROM alpine AS build
 
-RUN apk add --no-cache --repository=https://dl-cdn.alpinelinux.org/alpine/edge/community hugo
+RUN apk upgrade --no-cache && \
+    apk add --no-cache --repository=https://dl-cdn.alpinelinux.org/alpine/edge/community hugo
 
 ADD ./site /site
 
